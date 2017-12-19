@@ -40,12 +40,14 @@ body {
 	padding: 10px 15px;
 	background-color: #2754eb;
 }
-.cart {
+.account {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	text-align: center;
 	position: relative;
-	top: 25px;
+	top: 25px; /* Если выравнивать по центру блока с помощью line-height, 
+	то рамка тоже становится по ширине. Поэтому пришлось равнять пикселями.
+	Скажите, как можно решить этот момент?*/
 	float: right;
 }
 .account__cart-logo {
