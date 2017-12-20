@@ -50,22 +50,25 @@ body {
 	Скажите, как можно решить этот момент?*/
 	float: right;
 }
-.account__cart-logo {
+.cart {
+	display: inline;
+}
+.cart__logo {
 	margin-right: 5px;
 	position: relative;
 	top: 0;
 }
-.account__cart-link {
+.cart__link {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #404966;
 	font-size: 12px;
 }
-.account__cart-link:hover {
+.cart__link:hover {
 	text-decoration: none;
 	color: #000;
 }
-.account__cart-count {
+.cart__count {
 	display: inline-block;
 	height: 25px;
 	width: 25px;
