@@ -1,232 +1,62 @@
-font-family: 'Montserrat', sans-serif;
-font-family: 'Crimson Text', serif;
-
+html {
+	font-size: 10px;
+}
 body {
-
+	margin: 0;
 }
-/*header*/
-
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo.eot');
+    src: url('../fonts/Arvo.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Arvo.woff2') format('woff2'),
+        url('../fonts/Arvo.woff') format('woff'),
+        url('../fonts/Arvo.ttf') format('truetype'),
+        url('../fonts/Arvo.svg#Arvo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/Arvo-Bold.eot');
+    src: url('../fonts/Arvo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Arvo-Bold.woff2') format('woff2'),
+        url('../fonts/Arvo-Bold.woff') format('woff'),
+        url('../fonts/Arvo-Bold.ttf') format('truetype'),
+        url('../fonts/Arvo-Bold.svg#Arvo-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 .header {
-	border-bottom: 2px solid #eef1f6;
-	background-color: #fff;
-	z-index: 2;
-}
-.logo {
-	background: url(../img/header_logo.svg) no-repeat left center;
-	width: 105px;
-	height: 90px;
-}
-.navigation {
+	font-family: 'Arvo', sans-serif;
+	font-style: normal;
 	text-align: center;
-	position: relative;
-	top: 35px;
+	margin-bottom: 5rem;
 }
-.navigation__item {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	color: #404966;
-	display: inline;
-	text-decoration: none;
-	padding-left: 15px;
-	padding-right: 15px;
-	font-size: 14px;
-	-webkit-transition: ease .3s;
-	-o-transition: ease .3s;
-	transition: ease .3s;
+.header-text {
+	font-size: 2.8rem;
+	padding-top: 3rem;
+	color: #3b3f6a;
 }
-.navigation__item:hover {
-	text-decoration: none;
-	color: #fff;
-	padding: 10px 15px;
-	background-color: #2754eb;
-}
-.account {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
+.main-item {
 	text-align: center;
-	position: relative;
-	top: 25px; /* Если выравнивать по центру блока с помощью line-height, 
-	то рамка тоже становится по ширине. Поэтому пришлось равнять пикселями.
-	Скажите, как можно решить этот момент?*/
-	float: right;
+	margin-top: 5rem;
 }
-.cart {
-	display: inline;
+.main-item:last-child {
+	margin-bottom: 5rem;
 }
-.cart__logo {
-	margin-right: 5px;
-	position: relative;
-	top: 0;
+.item-image {
+	width: 90%;
+	max-width: 12rem;
+	height: 11rem;
 }
-.cart__link {
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #404966;
-	font-size: 12px;
+.item-header {
+	font-family: 'Arvo', sans-serif;
+	font-style: normal;
+	font-size: 2.5rem;
+	color: #3b3f6a;
 }
-.cart__link:hover {
-	text-decoration: none;
-	color: #000;
+.item-text {
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 1.6rem;
+	color: #8487a1;
 }
-.cart__count {
-	display: inline-block;
-	height: 25px;
-	width: 25px;
-	background-color: #e3e8f0;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 25px;
-}
-.account__enter-button {
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #404966;
-	font-weight: 600;
-	font-size: 12px;
-	display: inline-block;
-	border: 3px solid #eef1f6;
-	padding: 8px 13px;
-	border-radius: 30px;
-	margin-left: 20px;
-	-webkit-transition: ease .3s;
-	-o-transition: ease .3s;
-	transition: ease .3s;
-}
-.account__enter-button:hover {
-	text-decoration: none;
-	color: #fff;
-	background-color: #2754eb;
-}
-
-
-/*tabs,search*/
-.menu {
-	background-color: #fff;
-	z-index: 999;
-}
-.tabs {
-	padding-left: 0;
-	line-height: 57px;
-}
-.tabs__item {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	color: #cacedc;
-	text-decoration: none;
-	font-size: 11px;
-	padding-right: 30px;
-	text-transform: uppercase;
-}
-.tabs__item:hover {
-	text-decoration: none;
-	color: #343e5c;
-}
-.support {
-	padding: 0;
-	text-align: right;
-	line-height: 57px;
-}
-.support__item {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	color: #cacedc;
-	text-decoration: none;
-	font-size: 11px;
-	padding-right: 30px;
-	text-transform: uppercase;
-}
-.support__item:hover {
-	text-decoration: none;
-	color: #343e5c;
-}
-.search {
-	border-left: 2px solid #eef1f6;
-	border-right: 2px solid #eef1f6;
-	height: 57px;
-}
-input:focus {
-	outline: none;
-}
-::-webkit-input-placeholder {
-	font-family: 'Montserrat', sans-serif;
-	color: #cacedc;
-}
-::-moz-placeholder {
-	font-family: 'Montserrat', sans-serif;
-	color: #cacedc;
-}
-:-moz-placeholder {
-	font-family: 'Montserrat', sans-serif;
-	color: #cacedc;
-}
-:-ms-input-placeholder {
-	font-family: 'Montserrat', sans-serif;
-	color: #cacedc;
-}
-.search__input {
-	background: url(../img/search.svg) no-repeat left center;
-	padding: 20px 30px;
-	border: none;
-}
-
-/*main*/
-.main {
-	background-color: #1c1e23; 
-	height: 504px;
-}
-.image {
-	position: relative;
-	left: 100px;
-	width: 300px;
-	height: 504px;
-	background-image: url(../img/iphone.jpg);
-	-webkit-background-size: cover;
-	background-size: cover;
-	z-index: 0;
-}
-.description {
-	padding-top: 90px;
-}
-.description__header {
-	display: inline-block;
-	font-size: 42px;
-	font-weight: 400;
-	color: #fff;
-}
-.description__text {
-	display: inline-block;
-	font-family: 'Crimson Text', sans-serif;
-	color: #fff;
-	font-size: 16px;
-	padding-top: 25px;
-	padding-bottom: 70px;
-
-}
-.description__button {
-	display: inline-block;
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 12px;
-	color: #fff;
-	text-decoration: none;
-	background-color: #2754eb;
-	padding: 16px 52px;
-	border-radius: 30px;
-	-webkit-transition: ease .3s;
-	-o-transition: ease .3s;
-	transition: ease .3s;
-}
-.description__button:hover {
-	text-decoration: none;
-	color: #fff;
-	-webkit-box-shadow: 0 0 30px #2754eb;
-	box-shadow: 0 0 30px #2754eb;
-}
-
-
-
-
-
-
-
-
