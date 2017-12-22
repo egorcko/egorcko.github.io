@@ -38,6 +38,7 @@ body {
 	color: #3b3f6a;
 }
 .main-item {
+	min-height: 248px;
 	text-align: center;
 	margin-top: 5rem;
 }
