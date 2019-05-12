@@ -9,7 +9,12 @@ const TodoList = (props) => {
       const {id, ...itemProps} = item;
       return (
          <li key={id} className="list-group-item todo-list__item">
-            <TodoListItem {...itemProps}/>
+            <TodoListItem 
+               {...itemProps}
+               onDeleted={ () => props.onDeleted(id) }
+               onToggleImportant={ () => props.onToggleImportant(id) }
+               onToggleDone={ () => props.onToggleDone(id) }
+            />
          </li>
       )
    });
