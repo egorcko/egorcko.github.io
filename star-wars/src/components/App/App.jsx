@@ -1,5 +1,10 @@
 import React from 'react';
+import Header from '../Header'
 
-const App = (props) => {return()};
-
-export default App;
+export default class App extends Component {
+    render() {
+        return (
+            <Header/>
+        )
+    }
+};
