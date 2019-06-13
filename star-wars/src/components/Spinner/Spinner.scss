@@ -1,0 +1,27 @@
+$grey: rgba(48,48,48,1);
+$grey-opacity: rgba(48,48,48,.7);
+
+.spinner {
+   animation: spin 1s ease infinite;
+   position: relative;
+   width: 60px;
+   height: 60px;
+   display: inline-block;
+   border: 2px solid #00bc8c;
+   border-radius: 50%;
+   margin: 10px auto;
+   &:after {
+     content:"";
+     width: 85%;
+     height: 85%;
+     background: -webkit-linear-gradient(45deg, $grey 0%, $grey 40%, $grey-opacity 60%, rgba(0,0,0,0) 100%);
+     position: absolute;
+     top:0;
+     left: 0;
+     transform: translate(-5%,-5%);
+   }
+ }
+ @keyframes spin {
+   0%   { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+ }
