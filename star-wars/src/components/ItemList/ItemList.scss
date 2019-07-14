@@ -1,5 +1,9 @@
 .item-list .list-group-item {
    cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: left;
    &:hover {
       background-color: #444;
    }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import SwapiService from '../../services/swapi-service';
-import Spinner from '../Spinner'
+import Spinner from '../Spinner';
+import ErrorIndicator from '../ErrorIndicator';
 
 import './RandomPlanet.scss';
 
@@ -14,9 +15,13 @@ export default class RandomPlanet extends Component {
       loading: true
    };
 
-   constructor() {
-      super();
+   componentDidMount() {
       this.updatePlanet();
+      this.interval = setInterval(this.updatePlanet, 10000);
+   }
+
+   componentWillUnmount() {
+      clearInterval(this.interval)
    }
 
    onPlanetLoaded = (planet) => {
@@ -34,7 +39,7 @@ export default class RandomPlanet extends Component {
       })
    } 
 
-   updatePlanet() {
+   updatePlanet = () => {
       const id = Math.round(Math.random() * 25) + 2;
       this.swapiService
          .getPlanet(id)
@@ -43,11 +48,11 @@ export default class RandomPlanet extends Component {
    }
 
    render() {
-   const {planet, loading, error} = this.state;
-   let content = loading ? <Spinner/> : <PlanetView planet={planet}/>;
-   if (error) content = <ErrorIndicator/>
+      const {planet, loading, error} = this.state;
+      let content = loading ? <Spinner/> : <PlanetView planet={planet}/>;
+      if (error) content = <ErrorIndicator/>
 
-   return (
+      return (
          <div className="random-planet jumbotron rounded">
             { content }
          </div>
@@ -89,10 +94,4 @@ const PlanetView = ({planet}) => {
    )
 }
 
-const ErrorIndicator = () => {
-   return (
-      <React.Fragment>
-         <h5 className="error-message">Something wrong</h5>
-      </React.Fragment>
-   )
-}
+
