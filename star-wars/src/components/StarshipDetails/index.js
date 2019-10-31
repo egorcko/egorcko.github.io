@@ -1,3 +1,3 @@
-import StarshipDetails from './StarshipDetails.jsx';
+import StarshipDetails from './StarshipDetails';
 
 export default StarshipDetails;

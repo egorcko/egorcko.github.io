@@ -1,3 +1,3 @@
-import PlanetDetails from './PlanetDetails.jsx';
+import PlanetDetails from './PlanetDetails';
 
 export default PlanetDetails;

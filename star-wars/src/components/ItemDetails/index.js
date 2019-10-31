@@ -1,4 +1,4 @@
-import ItemDetails, {ItemProp} from './ItemDetails.jsx';
+import ItemDetails, {ItemProp} from './ItemDetails';
 
 export {
    ItemDetails,

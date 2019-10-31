@@ -1,6 +1,6 @@
-import PersonDetails from './PersonDetails.jsx';
-import PlanetDetails from './PlanetDetails.jsx';
-import StarshipDetails from './StarshipDetails.jsx';
+import PersonDetails from './PersonDetails';
+import PlanetDetails from './PlanetDetails';
+import StarshipDetails from './StarshipDetails';
 import {
    PersonList,
    PlanetList,
